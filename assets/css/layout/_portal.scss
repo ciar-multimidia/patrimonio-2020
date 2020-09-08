@@ -1,0 +1,103 @@
+
+/****************************************
+ * FICHA *
+ ****************************************/
+ .ficha-tecnica {
+ 	max-width: $artigo;
+ 	width: 100%; margin-bottom: 3em;
+ 	margin-right: auto;
+ 	margin-left: auto;
+
+ 	dt { margin-top: 1.8em; font-weight: bold; text-transform: uppercase; }
+ 	h2 + dt { margin-top: 10px; }
+ 	h2 {
+ 		margin-top: 1.8em;
+ 		&:first-of-type { margin-top: 0; }
+ 	}
+ }
+
+ .catalografica {
+ 	margin-right: auto;
+ 	margin-left: auto;
+	width: 100%;
+	max-width: $artigo;
+	font-size: 0.9em;
+	border: 1px solid $padrao;
+
+	p { margin: 0 0 10px; }
+
+	.titulo {
+		position: relative; 
+		width: 100%; 
+		font-size: 1.1em; 
+		border-bottom: 1px solid; 
+		padding: 10px 25px;
+		color: $padrao;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.codigo {
+		position: relative; 
+		width: 10%; 
+		float: left; 
+		padding: 25px 0px 25px 25px;
+		font-size: 1.1em;
+	}
+	
+	.dados {
+		position: relative; 
+		width: 88%; 
+		float: right; 
+		text-align: left; 
+		padding: 25px 25px 25px 0;
+		.cdu {
+			text-align: right;
+		}
+	}
+
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	& + .biblio-responsavel{
+		text-align: center;
+		margin-top: 0.5em;
+		font-size: 12px;
+		max-width: $artigo;
+		margin-right: auto;
+	 	margin-left: auto;
+	}
+}
+
+
+.marcas {
+	margin-right: auto;
+ 	margin-left: auto;
+	width: 100%;
+	max-width: $tablet;
+	@include flex(space-between);
+	@include align-items(center);
+
+	img { width: 30%; }
+}
+
+
+/****************************************
+ * DECLARACAO de RESPONSABILIDADE
+ ****************************************/
+.declara-responsabilidade {
+	width: 100%; background: $cinza;
+	padding: 2em; margin-top: 3em;
+	text-align: center; font-size: .85em;
+
+	p {
+		margin-right: auto;
+	 	margin-left: auto;
+		width: 100%;
+		max-width: $tablet;
+		margin-bottom: 10px;
+	}
+}

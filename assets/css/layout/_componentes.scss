@@ -1,0 +1,68 @@
+/****************************************
+ * CONTAINER QUE ENVOLVE MATERIAL *
+ ****************************************/
+
+.container {
+	width: 100%;
+    max-width: $container;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    position: relative;
+
+    @media (max-width: $container) {
+        max-width: 100%;
+    }
+}
+
+
+/****************************************
+ * CABECALHO *
+ ****************************************/
+ .cabecalho {
+	color: white;
+	width: 100%; margin-bottom: 3em;
+	background: url(../img/bg.jpg) repeat-x center top / cover;
+	border-bottom: 8px solid white;
+	outline: 2px solid $rosa;
+
+	.marca {
+		font-family: $fonte-marca;
+		font-weight: normal;
+		margin: 1.2em 0;
+		font-size: 2em;
+		line-height: 1.1;
+		color: inherit;
+
+		.subtitulo { margin-top: 10px; font-size: 1.1rem; font-family: $fonte-padrao; display: block; }
+
+		@media (max-width: $celular) {
+			font-size: 1.7em;
+			.subtitulo {font-size: 0.9rem; }
+		}
+		@media (min-width: $tablet) {
+			font-size: 2.6em;
+			.subtitulo {font-size: 1.6rem; }
+		}
+	}
+
+	p.governo {
+		width: 100%; text-align: center;
+		font-size: 13px; background: $rosa;
+		padding: 8px 10px 10px; margin: 0;
+	}
+
+
+	.infos {
+		margin-top: -20px; margin-bottom: 1.5em;
+		dt { margin-top: 20px; font-weight: bold; }
+	}
+
+	&.portal {
+		background-image: url(../img/ilustra4.png), url(../img/bg.jpg);
+		background-repeat: no-repeat, repeat;
+		background-size: auto 90%, cover;
+		background-position: bottom right, center top;
+	}
+}
+

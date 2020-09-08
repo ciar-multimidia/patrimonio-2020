@@ -1,0 +1,202 @@
+/****************************************
+ * VARIAVEIS *
+ ****************************************/
+/////// CORES VARIAVEIS
+$texto: #212121;
+$cinza: #F6F6F6;
+
+// CORES
+$livro1: #8dc63f;
+$livro2: #ffc52a;
+$livro3: #70cbd1;
+$livro4: #f6a1b4;
+$padrao: #75013F;
+$rosa: #C11462;
+
+
+/////// FAMILIAS UTILIZADAS
+$fonte-padrao: 'Source Sans Pro',sans-serif;
+$fonte-titulos: 'Roboto Condensed',sans-serif;
+$fonte-marca: 'HighVoltage Rough',sans-serif;
+
+
+/////// MEDIA QUERIES e TAMANHOS
+$container: 1180px;
+$tablet: 990px;
+$smart-maior: 680px;
+$smart-menor: 500px;
+$celular: 420px;
+$sidebar: 380px;
+
+$artigo: 700px;
+
+
+/////// IMPORTACOES
+@import "../bourbon/bourbon";
+@import "../padroes/reset";
+@import "../padroes/mixins";
+@import "../padroes/fontface";
+@import "../padroes/fancybox";
+
+
+/****************************************
+ * DEFINICOES E FORMATACOES DE TEXTO *
+ ****************************************/
+// links
+a {
+	&:link, &:visited, &:active, &:focus {
+		outline: 0;
+		color: $padrao;
+		@include transition(color 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+		text-decoration:none;
+	}
+
+	&:hover, &:focus {text-decoration: underline; font-weight: bold;}
+
+	&:focus { font-weight: bold; }
+}
+b, strong {
+	font-weight: bold;
+	color: inherit;
+}
+u {
+	text-decoration: underline;
+}
+i, em {
+	color: inherit;
+	font-style: italic;
+}
+s, del {
+	text-decoration: line-through;
+}
+
+// paragrafos e formatacoes padrao
+p, article ul, article ol, blockquote, figure {
+	margin-bottom: 1.8em;
+}
+
+small {
+	font-size: 80%;
+}
+
+center {
+	text-align: center;
+}
+
+// titulos
+h1, h2, h3, h4, h5 {
+	line-height: 1.3;
+	display: block;
+	color: $rosa;
+    font-weight: bold;
+    font-family: $fonte-titulos;
+
+	a {
+		color: inherit !important;
+		text-decoration:none !important;
+	}
+}
+
+h1 {
+    font-size: 2.1em; 
+
+    article {font-size: 1.9em;}
+    @media (max-width: $smart-maior) {
+
+    	font-size: 1.65em;
+
+    	article {font-size: 1.55em;}
+    }
+}
+
+h2 { 
+	font-size: 1.7em;
+	@media (max-width: $smart-maior) {font-size: 1.5em; }
+}
+h3 { 
+	font-size: 1.4em;
+	@media (max-width: $smart-maior) {font-size: 1.25em; }
+}
+h4 { 
+	font-size: 1.25em;
+	@media (max-width: $smart-maior) {font-size: 1.2em; }
+}
+h5 { 
+	font-size: 1.1em;
+	@media (max-width: $smart-maior) {font-size: 1em; }
+}
+h6 { font-size: 1em;}
+
+// quote
+blockquote {
+	font-size: 1em;
+	color: inherit;
+
+	p:last-of-type {margin-bottom: 0;}
+}
+
+// divisoria
+hr {
+	display: block;
+	width: 280px;
+	margin: 2em auto;
+    border: 0;
+    padding: 0;
+    height: 7px;
+    background: $padrao;
+    position: relative;
+    overflow: inherit;
+}
+
+// caixas de dialogo
+input, button, textarea {
+	@include appearance(none);
+	border: 0;
+	outline: 0;
+}
+
+textarea {
+	height: 200px;
+	padding: .5em;
+	line-height: 1.65;
+}
+
+// botoes
+button.botao, a.botao {
+	display: inline-block;
+	background: $padrao;
+	font-size: 1.2em;
+	line-height: 1; color: white; text-transform: uppercase;
+	padding: .7em 2em 1em; letter-spacing: 0.09em;
+	font-family: $fonte-titulos; cursor: pointer; text-decoration: none;
+	@include transition(background 0.15s ease-in-out);
+}
+
+button.botao, a.botao-light {
+	display: inline-block;
+	background: none;
+	font-size: 1.2em;
+	line-height: 1; color: $texto; text-transform: uppercase;
+	padding: calc(1em - 6px) 1em 1em; letter-spacing: 0.09em;
+	font-family: $fonte-titulos; cursor: pointer;
+	border-top: 6px solid $rosa; text-decoration: none;
+	@include transition(background 0.15s ease-in-out);
+
+	&:hover, &:focus {
+		background: $rosa; color: white;
+	}
+}
+
+
+// definicoes
+.clear { clear: both; }
+.hidden { display: none; }
+
+// alinhamentos
+.esq {text-align: left;}
+.dir {text-align: right;}
+.centralizado {text-align: center;}
+
+.floatleft {float: left; margin: 0 1em 1em 0 !important;}
+.floatright {float: right; margin: 0 0 1em 1em !important;}
+
