@@ -1,0 +1,73 @@
+.sumario {
+	width: 100%;
+	@include flex(center);
+	margin: 6em 0 3em;
+
+	li {
+		width: calc(33% - 40px); margin-left: 60px;
+		position: relative; overflow: hidden;
+		margin-bottom: 60px;
+
+		@media (min-width: $smart-maior + 1px) {
+			&:nth-of-type(3n-2) {margin-left: 0;}
+		}		
+		@media (min-width: $celular + 1px) and (max-width: $smart-maior) { 
+			width: calc(50% - 30px); margin-left: 45px; margin-bottom: 45px;
+			&:nth-of-type(2n-1) {margin-left: 0;}
+		}
+		@media (max-width: $celular) {
+			width: 100%; margin-left: 0; margin-bottom: 30px;
+		}
+
+		a {
+			display: block;
+			border-top: 8px solid $rosa;
+			padding-top: 1em; color: inherit;
+			@include transition(border-color 0.2s ease-in-out);
+
+			h2 { font-size: 1.2em; }
+			h3 { font-size: .9em; font-family: inherit; color: $texto; font-weight: normal; margin-top: 10px;}
+
+			&:hover, &:focus {
+				text-decoration: none;
+				border-top-color: $padrao;
+
+				h3 { text-decoration: underline; text-decoration-color: $rosa; }
+			}
+		}
+		span { height: 1px; width: 1px; text-indent: 9999px; line-height: 99999px; overflow: hidden; position: absolute; left: 999999px;}
+
+	}
+
+}
+
+
+.wrap-busca {
+	width: $smart-menor; 
+	margin: 1.5em auto 10px;
+
+	input {
+		width: 100%;
+		border: 1px solid $rosa;
+		margin: 0 0 10px;
+		display: block;
+		padding: 10px 20px; 
+		font-size: 1em; border-radius: 4px;
+		text-align: center;
+	}
+
+	p { font-size: .75em; text-align: center; }
+}
+
+.notfound {
+
+	font-style: italic;
+	display: none; line-height: 1.3;
+	margin-top: -4em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.notfound.is-visible { display: block; }
+.is-hidden { display: none; }
+.is-invisible { opacity: 0; visibility: hidden;}

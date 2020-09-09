@@ -25,25 +25,27 @@
 	background: url(../img/bg.jpg) repeat-x center top / cover;
 	border-bottom: 8px solid white;
 	outline: 2px solid $rosa;
+	padding-bottom: .5em;
 
 	.marca {
 		font-family: $fonte-marca;
 		font-weight: normal;
-		margin: 1.2em 0;
-		font-size: 2em;
+		padding: 1em 0 .5em;
+		font-size: 1.7em;
 		line-height: 1.1;
 		color: inherit;
 
-		.subtitulo { margin-top: 10px; font-size: 1.1rem; font-family: $fonte-padrao; display: block; }
+		.subtitulo { margin-top: 10px; font-size: 1rem; font-family: $fonte-padrao; display: block; }
 
 		@media (max-width: $celular) {
 			font-size: 1.7em;
 			.subtitulo {font-size: 0.9rem; }
 		}
 		@media (min-width: $tablet) {
-			font-size: 2.6em;
-			.subtitulo {font-size: 1.6rem; }
+			font-size: 2.3em;
+			.subtitulo {font-size: 1.4rem; }
 		}
+
 	}
 
 	p.governo {
@@ -63,6 +65,51 @@
 		background-repeat: no-repeat, repeat;
 		background-size: auto 90%, cover;
 		background-position: bottom right, center top;
+
+		.marca {
+			padding-top: 1.2em;
+			font-size: 2em;
+
+			@media (max-width: $celular) {
+				font-size: 1.7em;
+				.subtitulo {font-size: 0.9rem; }
+			}
+			@media (min-width: $tablet) {
+				font-size: 2.6em;
+				.subtitulo {font-size: 1.6rem; }
+			}
+		}
 	}
 }
 
+
+/****************************************
+ * RODAPE *
+ ****************************************/
+.rodape {
+	color: white;
+	width: 100%; margin-top: 3em;
+	background: url(../img/bg.jpg) repeat-x center top / cover;
+	border-top: 8px solid white;
+	outline: 2px solid $rosa;
+
+	.container {
+		@include flex(space-between);
+		@include flex-wrap(nowrap);
+		font-family: $fonte-titulos;
+		text-transform: uppercase;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		font-size: 1.1em;
+
+		a { color: inherit; }
+
+		a:nth-of-type(1) {@include order(1);}
+		a:nth-of-type(2) {@include order(3);}
+		a:nth-of-type(3) {@include order(2);}
+
+		@media (max-width: $smart-maior) {
+			font-size: .85em;
+		}
+	}
+}
