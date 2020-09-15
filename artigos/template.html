@@ -4,11 +4,21 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Patrimônio, Direitos Culturais e Cidadania</title>
-	<base href="../../index.html">
+	<base href="../index.html">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/layout.css">
 </head>
 <body>
+
+<header class="cabecalho">
+	<div class="container">
+		<h2 class="marca">
+			Patrimônio, Direitos Culturais e Cidadania
+			<span class="subtitulo">Propostas, Práticas e Ações Dialógicas</span>
+		</h2>	
+	</div>
+</header>
+
 
 
 	<main id="area-util" class="container">
@@ -32,7 +42,7 @@
 
 			<p>Abner Lemuel Rosa de O. G. Pereira - APROVADO</p>
 
-			<p>Quas cum, a laboriosam. Libero quisquam, laborum harum placeat, doloremque accusantium error. Labore temporibus, deserunt alias necessitatibus iusto, laudantium distinctio inventore, id non assumenda odio rerum pariatur iste, mollitia earum? <button class="abrir_nota" aria-label="nota de rodapé">01</button></p>
+			<p>Quas cum, a laboriosam. Libero quisquam, laborum harum placeat, doloremque accusantium error. Labore temporibus, deserunt alias necessitatibus iusto, laudantium distinctio inventore, id non assumenda odio rerum pariatur iste, mollitia earum? <button class="abrir_nota" aria-label="nota de rodapé" data-nota="1">01</button></p>
 
 			<figure>
 				<img src="imagens/placeholder.jpg" alt="">
@@ -44,7 +54,7 @@
 
 
 			<h2>Lorem ipsum dolor sit amet.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magnam accusamus itaque necessitatibus doloribus deserunt harum quos animi modi a, ipsa quia reiciendis ullam laborum veritatis omnis magni. Vitae itaque rem esse veniam omnis officia ullam doloremque eum eaque explicabo ab, repudiandae, minus quibusdam, obcaecati amet. Hic officia eum corporis laudantium, dignissimos vero. Modi autem reprehenderit veniam voluptatibus nisi dolor error, eaque expedita, obcaecati vel nihil quibusdam, aut doloribus odio architecto cupiditate fuga consequatur, labore quia recusandae quo quasi. Dolor est recusandae illo magni eveniet magnam repudiandae voluptate, reprehenderit ullam, corporis assumenda perspiciatis, eum provident odio labore incidunt ipsum totam.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magnam accusamus itaque necessitatibus doloribus deserunt harum quos animi modi a, ipsa quia reiciendis ullam laborum veritatis omnis magni. Vitae itaque rem esse veniam omnis officia ullam doloremque eum eaque explicabo ab, repudiandae, minus quibusdam, obcaecati amet. Hic officia eum corporis laudantium, dignissimos vero. Modi autem reprehenderit veniam voluptatibus nisi dolor error, eaque expedita, obcaecati vel nihil quibusdam, aut doloribus odio architecto cupiditate fuga consequatur, <button class="abrir_nota" aria-label="nota de rodapé" data-nota="2">02</button> labore quia recusandae quo quasi. Dolor est recusandae illo magni eveniet magnam repudiandae voluptate, reprehenderit ullam, corporis assumenda perspiciatis, eum provident odio labore incidunt ipsum totam.</p>
 
 			<div class="wrap-table">
 				<table>
@@ -148,17 +158,32 @@
     	<button class="fechar_nota" title="Fechar"><span aria-hidden="true">&times;</span></button>
     </div>
 </div>
+
+<div class="modal" data-nota="2" aria-hidden="true" aria-label="Nota de rodapé 2" aria-describedby="explicaNota" role="dialog">
+	<div role="document">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eaque ipsa dolore quibusdam unde laudantium harum impedit recusandae perferendis similique atque consequuntur incidunt nostrum ea voluptatem suscipit, accusamus deserunt quisquam.</p>
+
+    	<button class="fechar_nota" title="Fechar"><span aria-hidden="true">&times;</span></button>
+    </div>
+</div>
+
+
 <div id="explicaNota">Nota de rodape. Aperte ESC para sair ou clique no botão Fechar.</div>
 <div class="modalOverlay" tabindex="-1"></div>
 	
 
-
+<footer class="rodape">
+	<div class="container">
+      <a href="artigos/artigo0X.html"><span aria-hidden="true">&larr;</span> Anterior</a>
+      <a href="artigos/artigo0X.html">Próximo <span aria-hidden="true">&rarr;</span></a>
+      <a href="index.html">Início</a>
+	</div>
+</footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="assets/js/loader.js"></script>
 <script src="assets/js/app.js"></script>
-	
+
 </body>
 </html>

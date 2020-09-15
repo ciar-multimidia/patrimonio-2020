@@ -4,19 +4,16 @@
 	margin: 6em 0 3em;
 
 	li {
-		width: calc(33% - 40px); margin-left: 60px;
+		width: calc(33% - 40px); margin: 0 20px 60px;
 		position: relative; overflow: hidden;
-		margin-bottom: 60px;
-
-		@media (min-width: $smart-maior + 1px) {
-			&:nth-of-type(3n-2) {margin-left: 0;}
-		}		
+		
+		
 		@media (min-width: $celular + 1px) and (max-width: $smart-maior) { 
-			width: calc(50% - 30px); margin-left: 45px; margin-bottom: 45px;
-			&:nth-of-type(2n-1) {margin-left: 0;}
+			width: calc(50% - 30px); margin-left: 15px; margin-right: 15px;
+
 		}
 		@media (max-width: $celular) {
-			width: 100%; margin-left: 0; margin-bottom: 30px;
+			width: 100%; margin-left: 0; margin-right: 0;
 		}
 
 		a {
@@ -24,7 +21,8 @@
 			border-top: 8px solid $rosa;
 			padding-top: 1em; color: inherit;
 			@include transition(border-color 0.2s ease-in-out);
-
+			position: relative; overflow: hidden;
+			
 			h2 { font-size: 1.2em; }
 			h3 { font-size: .9em; font-family: inherit; color: $texto; font-weight: normal; margin-top: 10px;}
 
@@ -34,9 +32,10 @@
 
 				h3 { text-decoration: underline; text-decoration-color: $rosa; }
 			}
-		}
-		span { height: 1px; width: 1px; text-indent: 9999px; line-height: 99999px; overflow: hidden; position: absolute; left: 999999px;}
 
+			span { height: 1px; width: 1px; text-indent: 9999px; line-height: 99999px; overflow: hidden; position: absolute; left: 999999px;}
+
+		}
 	}
 
 }
@@ -49,14 +48,14 @@
 	input {
 		width: 100%;
 		border: 1px solid $rosa;
-		margin: 0 0 10px;
+		margin: 10px 0;
 		display: block;
 		padding: 10px 20px; 
 		font-size: 1em; border-radius: 4px;
 		text-align: center;
 	}
 
-	p { font-size: .75em; text-align: center; }
+	p { font-size: .9em; text-align: center; margin: 0;}
 }
 
 .notfound {

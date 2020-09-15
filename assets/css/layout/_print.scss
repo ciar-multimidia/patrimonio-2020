@@ -1,0 +1,76 @@
+@media print {
+
+    @page { margin: 2cm; size: A4; }
+
+    body {
+        color: black;
+        font-size: 11pt;
+        line-height: 1.5;
+        min-height: initial;
+        text-align: justify;
+        @include hyphens(auto);
+        background: transparent;
+        font-family:'Calibri',$fonte-padrao;
+    }
+
+    main {
+       
+    }
+
+    .container { max-width: 100%;}
+
+    .cabecalho {
+        height: auto;
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        border-right: 0;
+        border-left: 0;
+        border-top: 0;
+        outline: 0;
+        margin-bottom: 2cm;
+
+        .marca {font-family: $fonte-titulos;}
+    }
+
+    #area-util {
+        background: transparent;
+        border: none;
+
+        h1, h2, h3, h4, h5, h6 { text-align: left; color: inherit; page-break-inside: avoid;}
+
+        article { width: 100%; max-width: 100%; }
+
+        figure, .galeria-horizontal figure, article > * {page-break-inside: avoid;}
+    }
+
+    .rodape {display: none;}
+
+    span.pagina {display: none;}
+
+
+
+    //// nota rodape
+    .abrir_nota { border-color: black; color: black; background: transparent; }
+    .modal {
+        display: block; padding: .5cm 10px;
+        background: transparent; page-break-inside: avoid;
+        position: relative; top: initial; left: initial;
+        width: 100%; border-top: 4px solid $cinza;
+        max-width: initial; max-height: initial; 
+        overflow: hidden; box-shadow: none;
+        @include transform(translate(0,0));
+
+        &[aria-label]:before {
+            padding: 0; font-weight: bold;
+            font-size: inherit;
+            content: attr(aria-label); display: block;
+        }
+
+        div[role="document"] {
+            font-size: inherit;
+
+            button {display: none;}
+        }
+    }
+}

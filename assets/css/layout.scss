@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "padroes/predefinicoes";
+@import "padroes/nota-rodape";
 
 /////// LAYOUT
 body, html {overflow-x: hidden;}
@@ -20,3 +21,16 @@ body {
 @import "layout/sumario";
 
 
+#area-util {
+	@include flex(space-between);
+
+	h1 { width: 100%; }
+
+	article {
+		width: 100%; margin-top: 2em;
+		max-width: $artigo;
+	}
+}
+
+
+@import "layout/print";
