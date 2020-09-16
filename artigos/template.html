@@ -16,6 +16,11 @@
 			Patrimônio, Direitos Culturais e Cidadania
 			<span class="subtitulo">Propostas, Práticas e Ações Dialógicas</span>
 		</h2>	
+
+		<nav>
+			<button onclick="window.print()" class="imprimir" role="button"><span>Imprimir</span></button>
+			<a href="sumario.html" class="sumario"><span>Acessar sumário</span></a>
+		</nav>
 	</div>
 </header>
 
@@ -29,23 +34,11 @@
 
 
 		<article>
-			<div class="infos">
-				<p><strong>Aluno:</strong> Abner Lemuel Rosa de O. G. Pereira</p>
-				<p><strong>Polo:</strong> Catalão</p>
-				<p><strong>Orientador acadêmico:</strong> José Eduardo Mendonça Umbelino Filho</p>
-				<p><strong>Coordenadora de orientação:</strong> Maurides Batista de Macêdo Filha</p>
-			</div>	
-
-
 			
-			<h2>Resumo</h2>	
-
-			<p>Abner Lemuel Rosa de O. G. Pereira - APROVADO</p>
-
-			<p>Quas cum, a laboriosam. Libero quisquam, laborum harum placeat, doloremque accusantium error. Labore temporibus, deserunt alias necessitatibus iusto, laudantium distinctio inventore, id non assumenda odio rerum pariatur iste, mollitia earum? <button class="abrir_nota" aria-label="nota de rodapé" data-nota="1">01</button></p>
+			<p><strong>Resumo:</strong> Quas cum, a laboriosam. Libero quisquam, laborum harum placeat, doloremque accusantium error. Labore temporibus, deserunt alias necessitatibus iusto, laudantium distinctio inventore, id non assumenda odio rerum pariatur iste, mollitia earum? <button class="abrir_nota" aria-label="nota de rodapé" data-nota="1">01</button></p>
 
 			<figure>
-				<img src="imagens/placeholder.jpg" alt="">
+				<img src="assets/img/bg.jpg" alt="">
 				<figcaption>
 					<p><strong>Legenda:</strong> Eaque illo commodi distinctio.</p>
 					<p><strong>Descrição:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sequi, at, nihil qui doloremque ea unde repellat doloribus architecto voluptate quisquam quos eaque. In explicabo, qui. Eaque illo commodi distinctio.</p>
@@ -113,38 +106,59 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore qui provident unde sint laudantium hic quibusdam neque eligendi optio suscipit quos voluptates maiores nobis, recusandae voluptate impedit. Voluptate consequatur consectetur sapiente enim nobis dignissimos quae earum, rem quisquam laborum quasi, sequi qui fugit voluptatibus id fuga necessitatibus numquam sint, doloremque nesciunt. Cumque optio et labore modi asperiores odit, repellat, ipsa nemo! Veniam voluptates fuga quibusdam illum, quo eos magnam provident fugit, iusto nostrum natus labore maxime libero. Doloremque totam, atque.</p>
 
-
-			<div class="galeria">
-				<figure>
-					<img src="imagens/placeholder.jpg" alt="">
-					<figcaption>
-						<p><strong>Legenda:</strong> Eaque illo commodi distinctio.</p>
-						<p><strong>Descrição:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sequi, at, nihil qui doloremque ea unde repellat doloribus architecto voluptate quisquam quos eaque. In explicabo, qui. Eaque illo commodi distinctio.</p>
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="imagens/placeholder.jpg" alt="">
-					<figcaption>
-						<p><strong>Legenda:</strong> Eaque illo commodi distinctio.</p>
-						<p><strong>Descrição:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sequi, at, nihil qui doloremque ea unde repellat doloribus architecto voluptate quisquam quos eaque. In explicabo, qui. Eaque illo commodi distinctio.</p>
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="imagens/placeholder.jpg" alt="">
-					<figcaption>
-						<p><strong>Legenda:</strong> Eaque illo commodi distinctio.</p>
-						<p><strong>Descrição:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sequi, at, nihil qui doloremque ea unde repellat doloribus architecto voluptate quisquam quos eaque. In explicabo, qui. Eaque illo commodi distinctio.</p>
-					</figcaption>
-				</figure>
-			</div>
-
-
 			<ol>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ut consequatur cum nemo et dignissimos explicabo, pariatur, expedita facilis deleniti? Maiores, tempora corporis dolorum vel repellendus beatae eaque illum, mollitia.</li>
 				<li>Quam tempora eos atque impedit, necessitatibus, quibusdam repellat distinctio doloribus, error velit quae suscipit assumenda? Esse itaque quos modi dolorum temporibus quam a nostrum ipsum quis quas, atque aperiam iure.</li>
 				<li>Eos praesentium perspiciatis repudiandae earum odit, laudantium totam ullam voluptatem, sunt eligendi sit, saepe reiciendis. Sequi vel consectetur iure aut reiciendis saepe cum nobis quisquam voluptatum pariatur non, velit minus!</li>
 			</ol>
 		</article>
+
+
+
+		<!-- COLUNA LATERAL - TAG ASIDE -->
+		<aside>
+			<div class="infos">
+				<p><strong>Aluno:</strong> Abner Lemuel Rosa de O. G. Pereira</p>
+				<p><strong>Polo:</strong> Catalão</p>
+				<p><strong>Orientador acadêmico:</strong> José Eduardo Mendonça Umbelino Filho</p>
+				<p><strong>Coordenadora de orientação:</strong> Maurides Batista de Macêdo Filha</p>
+			</div>	
+
+			<h2>Galeria de fotos</h2>
+			<div class="galeria">
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+				<figure style="background-image: url(assets/img/bg.jpg)">
+					<a data-fancybox="galeria" href="assets/img/bg.jpg"><img src="assets/img/bg.jpg" alt=""></a>
+				</figure>
+			</div>
+
+
+			<ul class="anexos">
+				<li><a href="arquivo.pdf" download>Baixar Anexo #1</a></li>
+				<li><a href="arquivo.pdf" download>Baixar Anexo #2</a></li>
+				<li><a href="arquivo.pdf" download>Baixar Anexo #3</a></li>
+			</ul>
+		</aside>
 
 	</main>
 	

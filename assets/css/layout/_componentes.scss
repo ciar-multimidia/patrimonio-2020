@@ -60,6 +60,44 @@
 		dt { margin-top: 20px; font-weight: bold; }
 	}
 
+
+	&:not(.portal) .container {
+		@include display(flex);
+		@include justify-content(space-between);
+		@include align-items(center);
+
+		.marca { @include flex-grow(1);  }
+
+		nav {
+			@include flex-shrink(0);
+			@include align-self(center);
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(flex-end);
+
+			a.sumario, button.imprimir {
+				display: inline-block; width: 41px; height: 37px; line-height: 37px;
+				padding: 2px; cursor: pointer;
+				position: relative; overflow: hidden; margin: 0 0 0 1em;
+
+				span {position: absolute; top: -999px; left: 999px;}
+
+				&:focus, &:hover {
+					outline: 2px solid $rosa; 
+				}
+			}
+
+			a.sumario {background: url(../img/bars.svg) no-repeat center center / 34px;}
+			button.imprimir {
+				background: url(../img/print.svg) no-repeat center center / 30px;
+				@media (max-width: $smart-maior) {
+					display: none;
+				}
+			}
+
+		}
+	}
+
 	&.portal {
 		background-image: url(../img/ilustra4.png), url(../img/bg.jpg);
 		background-repeat: no-repeat, repeat;
