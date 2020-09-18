@@ -1,6 +1,6 @@
 @media print {
 
-    @page { margin: 2cm; size: A4; }
+    @page { margin: 1cm; size: A4; }
 
     body {
         color: black;
@@ -31,17 +31,42 @@
         margin-bottom: 2cm;
 
         .marca {font-family: $fonte-titulos;}
+
+        &:not(.portal) .container {
+            nav { display: none; }
+        }
     }
 
     #area-util {
         background: transparent;
         border: none;
 
-        h1, h2, h3, h4, h5, h6 { text-align: left; color: inherit; page-break-inside: avoid;}
+        h1, h2, h3, h4, h5, h6 { text-align: left; color: inherit;}
 
-        article { width: 100%; max-width: 100%; }
+        article { width: 100%; max-width: 100%;}
 
         figure, .galeria-horizontal figure, article > * {page-break-inside: avoid;}
+
+        span.pagina { display: none; }
+
+        article .video {
+            position: relative; height: auto;
+            padding: 0; font-size: inherit;
+            &:before { content: 'Video - ' attr(data-url); display: block; font-weight: bold;}
+            iframe { display: none; }
+        }
+
+        aside {
+            ul.anexos li {
+                width: 100%; 
+                a {text-align: left;
+                    &:before { display: none; }
+                    &:after {
+                        content: ' - ' attr(href); display: inline-block;
+                    }
+                }
+            }
+        }
     }
 
     .rodape {display: none;}

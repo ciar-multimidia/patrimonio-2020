@@ -151,3 +151,24 @@
 		}
 	}
 }
+
+
+
+/****************************************
+ * PAGINACAO *
+ ****************************************/
+ span.pagina {
+    text-align: right;
+    padding: 0; position: relative;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 1rem;
+    color: darken($cinza,30%);
+
+    &:after {
+    	width: calc(100% - 65px); height: 1px;
+    	background-color: darken($cinza,5%); left: 0px;
+    	top: 50%; position: absolute;
+    	display: block; content: "";
+    }
+}
