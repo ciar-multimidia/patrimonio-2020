@@ -1814,6 +1814,7 @@ span.pagina:after {
   margin: 0 20px 60px;
   position: relative;
   overflow: hidden;
+  transition: opacity 0.3s linear;
 }
 @media (min-width: 421px) and (max-width: 680px) {
   .sumario li {

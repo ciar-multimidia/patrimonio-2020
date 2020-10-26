@@ -20,13 +20,9 @@
         itemsIndexed.push( $( this ).text().replace( /\s{2,}/g, ' ' ).toLowerCase() );
     });
 
-    $input.on( 'keyup', function( e )
+    $input.on( 'input', function( e )
     {
-        if( e.keyCode == 13 ) // enter
-        {
-            $input.trigger( 'blur' );
-            return true;
-        }
+        
 
         for (var i in timeouts) {
             clearTimeout(timeouts[i]);
@@ -50,9 +46,9 @@
         }
         else $items.removeClass( 'is-hidden' );
 
-        var $visibleItems = $items.not('is-hidden'),
-            tempoBase     = 300,
-            incremento    = 40;
+        var $visibleItems = $items.not('.is-hidden'),
+            tempoBase     = 150,
+            incremento    = 15;
 
         $visibleItems.each(function(index, el) {
             timeouts.push(setTimeout(function() {
